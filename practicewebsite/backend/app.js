@@ -12,13 +12,7 @@ const PORT=process.env.PORT||8000
 
 
 app.use(express.json());
-app.use(cors(
-    {
-        origin:["https://deploy-mern-1whq.versal.app"],
-        methods:["POST","GET"],
-        credentials:true
-    }
-));
+app.use(cors());
 
 app.use('/api/v1/',Courses)
 app.use('/api/v1/',Applicationpath)
